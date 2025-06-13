@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border:5px dashed black;
+            border-radius: 10%;
+            margin: 20px;
+            position: static;
+            left: 100px;
+        }
+        div#box1{
+            width: 300px;
+            height: 300px;
+            background-color: grey;
+            border: 5px solid yellow;
+            margin: 20px;
+            border-radius: 10%;
+            position: relative;
+            left: 100px;
+            right: 200px;
+            /* z-index:1; */
+
+        }
+        div#box2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border:5px dashed black;
+            border-radius: 10%;
+            margin: 20px;
+            position: absolute;
+            top: 150px;
+            right: 20px;
+           
+        }
+        div.box3{
+            position: fixed;
+            color: black;
+            width: 100px;
+            height: 20px;
+            background-color:none;
+            border: 2px dashed red;
+            bottom: 0;
+            right: 0;
+            border-radius: 10%;
+            
+        }
+        div#box4{
+            position: sticky;
+            width: 100%;
+            background-color:gold;
+            border: 5px solid;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+        div{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            border: 3px double black;
+            padding: 10px;
+            background-color: lightgreen;
+
+        }
+        p{
+           font-size: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p.a{
+            font-style: oblique;
+            color: red;
+            font-size: xx-large;
+        }
+        p.b{
+            font-style: italic;
+            font-size: x-large;
+            font-variant: small-caps;
+        }
+        h4{
+            margin-top: 100px;  
+        }
+        div.overflow > p{
+            color: black;
+            border: 2px solid black;
+            height: 100px;
+            width: 500px;
+            overflow: auto;
+            /* overflow: visible; */
+            /* overflow: scroll; */
+        }
+        div{
+            color: black;
+        }
+        div#f1{
+            flex:1;
+            background-color: red;
+            display: flex;
+            margin: 10px;
+            border: 1px solid black;
+        }
+        div#f2{
+           flex:1;
+            background-color: grey;
+            display: flex;
+            border: 1px solid black;
+        }
+        div#f3{
+            flex:1;
+            background-color: transparent;
+            border: 1px solid black;
+            display: flex;
+            margin: 20px;
+        }
+        div#t1{
+            height: 100px;
+            width: 100px;
+            background-color:violet;
+            transition: width 2s,height 4s;
+            border: 3px dashed black;
+        }
+        div#t1:hover{
+            width: 300px;
+            height: 300px;
+        }
+        div#k1{
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            animation-name: abc;
+            animation-duration: 4s;
+        }
+        @keyframes abc{
+            from {background-color:orange;}
+            to{background-color:red;}
+        }
+        div#k2{
+            position:relative;
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            animation-name: def;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-duration: 4s ;
+            margin: 20px;
+        }
+        @keyframes def{
+            0% {background-color:blue;left:0px;top:0px;}
+            25% {background-color:red;left:200px;top:0px;}
+            50% {background-color:blue;left:200px;top:200px}
+            75% {background-color:red;left:0px;top:200px;}
+            100% {background-color:red;left:0px;top:0px;}
+        }
+        body{
+            padding: 20px;
+            padding-bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positions in CSS</h1>
+    <p>The position property specifies the type of positioning method used for an element.
+    </p>
+    <p>There are five different position values:</p>
+    <ul>
+        <li>Static</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ul>
+    <div id="box4"><p>This is sticky</p></div>
+    <div id="box"><p>Hello</p></div>  
+     <div id="box1"><p>CSS</p>
+        <div id="box2"></div>
+    </div>
+     <div class="box3"><p>Fixed positon</p></div>
+    <h4>Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.</h4>
+
+    <hr>
+    <h1>OverFlow in CSS</h1>
+    <p>The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.</p>
+    <p>The overflow property has the following values:</p>
+    <ul>
+        <li>visible</li>
+        <li>hidden</li>
+        <li>scroll</li>
+        <li>auto</li>
+    </ul>
+     <div class="overflow">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.   
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+     </div>
+
+     <hr>
+     <h1>Flex Box in CSS</h1>
+     <div class="parent">
+        <div id="f1"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+        <div id="f2"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+        <div id="f3"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+     </div>
+     <hr>
+     <h1>Transitions in CSS</h1>
+     <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+     <h3>Mouse over the element below to see a CSS transition effect:
+
+    </h3>
+     <div id="t1"></div>
+     <hr>
+     <h1>Keyframes in CSS</h1>
+     <div id="k1"></div>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, porro, autem sed nisi esse consectetur sunt obcaecati cupiditate quod aspernatur accusantium dolore rerum. Aspernatur molestias quisquam aperiam earum dolor odio?
+     Voluptate voluptatem alias itaque sunt, eveniet perferendis similique autem eum atque fugiat iusto quia quod provident nihil explicabo magnam ipsam fuga perspiciatis exercitationem, excepturi deserunt. Consectetur quod dignissimos laudantium distinctio.
+     <div id="k2"></div>
+     
+</body>
+</html>

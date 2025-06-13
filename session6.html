@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .one{
+            font-size: 25px;
+            font-family: fantasy;
+            text-align: center;
+            background-color: greenyellow;
+        }
+        .parent{
+            background-color: grey;
+            width: 15px;
+            display: inlineflex;
+            gap: 50px;
+        }
+        span{
+            color: red;
+        }
+        a:active{
+            color: blue;
+        }
+        /* pseudo class */
+        a:hover{
+            color:hotpink;
+            font-size: 40px;
+            background-color: greenyellow;
+           
+        }
+        .a>p{
+            font-size: 30px;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: goldenrod;
+            text-align: justify;
+            padding: 20px 30px 45px 40px;
+        }
+        /* pseudo Element */
+        h1::first-letter{
+            font-size: 55px;
+            color: red;
+        }
+  
+    </style>
+</head>
+<body>
+   <h1 style="color: black;"> Types of CSS</h1>
+
+    <!-- Inline css -->
+     <div  class="parent">
+    <div class="one" style="background-color: yellow; text-align: left;">
+        <p>Inline CSS</p>
+    </div>
+    <!-- Internal CSS -->
+     <div class="one" draggable="true">
+        <p>Internal CSS</p>
+     </div>
+     <!-- External CSS -->
+      <div class="one" id="css">
+        <p>External CSS</p>
+      </div></div>
+
+      <hr>
+
+      <div>
+        <p>This is <span>Inheritance</span> in html</p>
+      </div>
+      <div style="color: green;">
+        <p>This is <span>Inheritance</span> in html</p>
+      </div>
+      <div class="abc" style="color: blue;">
+        <p>This is <span>Inheritance</span> in html</p>
+      </div>
+      <hr>
+
+      <div class="a">
+        <p><a href=""> 5 star</a></p>
+        <p><a href="/index.html">link</a></p>
+      </div>
+      <hr>
+
+      <center><div class="box">
+        <h1>HTML</h1>
+        <h2 style="text-align: center;">CSS</h2>
+    </div></center>
+</body>-
+</html>

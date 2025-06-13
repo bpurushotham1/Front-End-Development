@@ -1,0 +1,25 @@
+form{
+     background-color: bisque;
+    border: 1px solid black;
+    text-align: left;
+}
+h1:hover{
+    color:red;
+    background-color: gray;
+}
+label.a{
+        line-height: 2.0;
+}
+input.b{
+    word-spacing: 10px;
+}
+input[type=text],select{
+    width: none;
+    
+}
+
+input[type="text"],select,input[type="tel"],input[type="date"],input[type="file"]{
+    position: relative;
+    left: 60px;
+
+}
